@@ -49,7 +49,6 @@ class PaymentFactory {
 
 public class Factory {
     public static void main(String[] args) {
-
         Payment p = PaymentFactory.getPayment("upi");
         p.Pay(2987.88);
     }
