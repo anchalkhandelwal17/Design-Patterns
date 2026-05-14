@@ -1,4 +1,4 @@
-package org.patterns;
+package org.patterns.creational;
 
 interface NotificationSender {
     void send(String message);
@@ -6,6 +6,13 @@ interface NotificationSender {
 
 interface NotificationTemplate {
     String formatMessage(String message);
+}
+
+interface NotificationFactory {
+
+    NotificationSender createSender();
+
+    NotificationTemplate createTemplate();
 }
 
 class EmailNotificationService implements NotificationSender {
@@ -30,18 +37,10 @@ class SmsNotificationService implements NotificationSender {
 }
 
 class SmsTemplateService implements NotificationTemplate {
-
     @Override
     public String formatMessage(String message) {
         return "Sms Template: " + message;
     }
-}
-
-interface NotificationFactory {
-
-    NotificationSender createSender();
-
-    NotificationTemplate createTemplate();
 }
 
 class EmailNotificationFactory implements NotificationFactory{
