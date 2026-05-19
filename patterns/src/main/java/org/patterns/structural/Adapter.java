@@ -1,5 +1,11 @@
 package org.patterns.structural;
 
+//The Adapter Pattern is a structural design pattern that allows
+//two incompatible interfaces to work together.
+//It acts as a middle-layer "wrapper" or translator between your main application (the client)
+//and an existing third-party library, legacy codebase, or service that has a different,
+//incompatible structure.
+
 // Target Interface
 interface iphoneCharger {
     void chargeIphone();

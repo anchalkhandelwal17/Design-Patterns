@@ -1,9 +1,13 @@
 package org.patterns.behavioral;
 
+//Strategy Interface
+//A common interface or abstract class that defines the method(s) all algorithms must implement.
 interface PaymentStrategy {
     void pay(int amount);
 }
 
+
+// Concrete Strategies
 // Concrete implementations of strategy interface that can be dynamically used
 class UpiPayment implements PaymentStrategy {
 
@@ -29,7 +33,8 @@ class CashPayment implements PaymentStrategy {
     }
 }
 
-// This class uses the dynamic behavior passed among all the different strategies
+//Context: The class that maintains a reference to a Strategy object and delegates the task to it.
+
 class PaymentService {
 
     private PaymentStrategy paymentStrategy;
@@ -43,6 +48,7 @@ class PaymentService {
     }
 }
 
+//Client: The code that selects the desired strategy and passes it to the Context.
 public class Strategy {
     public static void main(String[] args) {
 

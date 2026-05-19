@@ -1,5 +1,17 @@
 package org.patterns.creational;
 
+//Core Components To understand the pattern, it helps to look at its four main moving parts:
+
+//Abstract Factory: An interface that declares methods for creating each type of abstract product.
+
+//Concrete Factory: Classes that implement the Abstract Factory interface.
+//Each concrete factory corresponds to a specific "variant" or "family" of objects.
+
+//Abstract Product: An interface or base class for a type of product (e.g., a generic Button or Chair).
+
+//Concrete Product: The actual, specific implementations of the abstract products (e.g., a WindowsButton or a ModernChair).
+
+
 interface NotificationSender {
     void send(String message);
 }
@@ -88,6 +100,5 @@ public class AbstractFactory {
 
         String formattedMessage = template.formatMessage("Hello! Welcome");
         sender.send(formattedMessage);
-
     }
 }

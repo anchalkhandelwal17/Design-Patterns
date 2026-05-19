@@ -22,7 +22,6 @@ class User{
         this.salary = builder.salary;
     }
 
-
     @Override
     public String toString() {
         return "User{" +
