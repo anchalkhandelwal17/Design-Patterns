@@ -1,5 +1,10 @@
 package org.patterns.structural;
 
+//The Decorator Pattern is a structural design pattern that allows you to dynamically
+//attach new behaviors or responsibilities to an individual object without altering
+//the underlying class structure. It acts as a wrapper, enveloping the original object
+//in a decorator class that provides the exact same interface.
+
 // Common Contract
 interface Coffee {
 

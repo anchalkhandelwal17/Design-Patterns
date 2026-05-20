@@ -1,5 +1,10 @@
 package org.patterns.structural;
 
+//The Facade design pattern is a structural design pattern that provides a simple, unified, and easy-to-use
+//interface to a complex system or library.
+//Instead of forcing a client to interact with dozens of small, complicated classes,
+//the Facade acts as a helpful middleman that handles the heavy lifting behind the scenes.
+
 class DVDPlayer {
 
     public void on(){

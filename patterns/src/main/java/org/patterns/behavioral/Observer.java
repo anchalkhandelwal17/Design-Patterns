@@ -3,6 +3,7 @@ package org.patterns.behavioral;
 import java.util.ArrayList;
 import java.util.List;
 
+// Observer Interface
 interface Subscriber {
     void update(String s);
 }
@@ -14,6 +15,7 @@ interface Channel {
     void notifySubscribers();
 }
 
+// Observer
 class Person1 implements Subscriber {
 
     @Override
@@ -22,6 +24,7 @@ class Person1 implements Subscriber {
     }
 }
 
+// Observer
 class Person2 implements Subscriber {
 
     @Override
@@ -30,6 +33,7 @@ class Person2 implements Subscriber {
     }
 }
 
+// Observer
 class Person3 implements Subscriber {
 
     @Override
@@ -38,6 +42,7 @@ class Person3 implements Subscriber {
     }
 }
 
+// Subject (Observable)
 class YoutubeChannel implements Channel {
 
     private List<Subscriber> subscribers = new ArrayList<>();
